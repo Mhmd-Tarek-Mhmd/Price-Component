@@ -5,4 +5,4 @@
 ## Links
 
 - Live Site [URL](https://mhmd-tarek-mhmd.github.io/Price-Component)
-- Solution [URL](https://www.frontendmentor.io/solutions/price-component)
+- Solution [URL](https://www.frontendmentor.io/solutions/price-component-AawF57zIbg)
