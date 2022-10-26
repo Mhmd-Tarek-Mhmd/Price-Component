@@ -5,6 +5,170 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Price Component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
+    />
+    <style>
+      :root {
+        --base: white;
+        --gray: hsl(218, 22%, 67%);
+        --cyan: hsl(179, 62%, 43%);
+        --yellow: hsl(71, 73%, 54%);
+        --body-bg: hsl(204, 43%, 93%);
+        --font-family: "Karla", sans-serif;
+      }
+
+      /* Reset */
+      * {
+        margin: 0;
+        padding: 0;
+
+        box-sizing: border-box;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      ul {
+        list-style: none;
+      }
+
+      /* Base */
+      body {
+        display: grid;
+        height: 100vh;
+        line-height: 1;
+        min-height: 870px;
+        color: var(--base);
+        place-items: center;
+        background-color: var(--body-bg);
+        font-family: var(--font-family);
+      }
+      @media (min-width: 768px) {
+        body {
+          min-height: 500px;
+        }
+      }
+
+      /*
+        Component styles
+      */
+
+      .grid {
+        display: grid;
+        overflow: hidden;
+        border-radius: 4px;
+        justify-content: center;
+        grid-template-columns: 311px;
+        grid-template-rows: 267px 228px 227px;
+        box-shadow: 0px 1px 8px rgb(0 0 0 / 5%);
+      }
+      .grid > * {
+        padding-inline: 24px;
+      }
+      @media (min-width: 768px) {
+        .grid {
+          grid-template-rows: 216px 259px;
+          grid-template-columns: 317px 318px;
+        }
+        .grid > * {
+          padding-inline: 40px;
+          padding-top: 45px !important;
+        }
+      }
+
+      /* Intro */
+      .intro {
+        padding-top: 32px;
+        background-color: var(--base);
+      }
+      .intro .title {
+        font-size: 1.22rem;
+        color: var(--cyan);
+      }
+      .intro .subtitle {
+        font-size: 0.92rem;
+        color: var(--yellow);
+        margin-block: 25px 14px;
+      }
+      .intro .txt {
+        line-height: 1.7;
+        color: var(--gray);
+      }
+      @media (max-width: 767px) {
+        .intro .subtitle {
+          line-height: 1.4;
+        }
+        .intro .txt {
+          line-height: 1.95;
+          font-size: 0.85rem;
+        }
+      }
+      @media (min-width: 768px) {
+        .intro {
+          grid-column: span 2;
+        }
+        .intro .title {
+          font-size: 1.464rem;
+        }
+        .intro .subtitle {
+          font-size: 1.1rem;
+          margin-block: 29px 10px;
+        }
+      }
+
+      /* Rest */
+      .rest {
+        padding-top: 29px;
+        background-color: var(--cyan);
+      }
+      .rest .title {
+        font-size: 1.1rem;
+      }
+
+      .subscription .price {
+        display: flex;
+        column-gap: 12px;
+        align-items: center;
+        margin-block: 22px 12px;
+      }
+      .subscription .price strong {
+        font-size: 1.871rem;
+      }
+      .subscription .txt {
+        font-size: 0.97rem;
+      }
+      .subscription .cta {
+        width: 100%;
+        height: 48px;
+        display: grid;
+        margin-top: 30px;
+        border-radius: 4px;
+        place-items: center;
+        will-change: opacity;
+        transition: opacity 0.3s;
+        background-color: var(--yellow);
+        box-shadow: 0px 5px 10px rgb(0 0 0 / 10%);
+      }
+      .subscription .cta:is(:hover, :focus-visible) {
+        opacity: 0.9;
+      }
+
+      .benefits,
+      .benefits .list {
+        opacity: 0.8;
+      }
+      .benefits .title {
+        margin-bottom: 20px;
+      }
+      .benefits .list {
+        display: grid;
+        row-gap: 4px;
+      }
+    </style>
   </head>
   <body>
     <main>
